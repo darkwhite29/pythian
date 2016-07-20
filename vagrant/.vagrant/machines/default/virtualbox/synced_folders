@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"create":true,"guestpath":"/var/www","hostpath":"/Users/litan/Dropbox/SC/JobHunting/InterviewedCompanies/Pythian/vagrant/app","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/litan/Dropbox/SC/JobHunting/InterviewedCompanies/Pythian/vagrant","disabled":false,"__vagrantfile":true}}}

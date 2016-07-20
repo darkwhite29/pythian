@@ -1,0 +1,38 @@
+Pythian - DevOps Consultant Challenge
+
+
+Author: Li Tan
+
+Software Used: Vagrant (1.8.4), VirtualBox (5.0.26), and Puppet (4.5)
+
+
+1. Vagrant Virtual Machine Configuration
+
+Files and folders:
+
+Vagrantfile (file) and app (folder), and manifests (folder) under "vagrant"
+
+Usage:
+
+With Vagrant, VirtualBox, and Puppet installed,
+
+(1) Run "vagrant up" in the command line of the host machine;
+
+(2) When the virtual machine is booted, run "vagrant ssh" in the command line to access the guest box;
+
+(3) On the host, type 10.0.33.18 in a web brower to test if Apache is successfully installed and running with the Vagrantfile provisioner "Option 1: Shell";
+
+(4) On the guest, run "ps -ef | grep mongod" and "ps -ef | grep redis" in the command line to test if MongoDB and Redis are successfully installed and running with the Vagrantfile provisioner "Option 2: Puppet";
+
+(5) On the guest, run "exit" to logout the guest box, and on the host, run "vagrant halt" to shut down the guest box.
+
+
+2. Web Query (Implemented in Perl)
+
+Files and folders:
+
+"web_query.pl" (file) and "results" (file) under "WebsiteQuery"
+
+Usage:
+
+Run "perl web_query.pl" in the command line, and an output file named "results" will be generated in the same directory.

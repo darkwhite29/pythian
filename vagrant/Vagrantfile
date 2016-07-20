@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  ## Provided base. ##
+
+  config.vm.box = "ubuntu14-cloudimage"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+
+
+  ## Implementation starts. ##
+
+  config.vm.network "private_network", ip: "10.0.33.18"
+
+  config.vm.synced_folder "./app", "/var/www", create:true
+
+  # Option 1: Enable provisioning with a shell script.
+  config.vm.provision "shell", inline: <<-SHELL
+     sudo apt-get -y update
+     sudo apt-get -y install apache2 php5 libapache2-mod-php5
+     sudo service apache2 restart
+  SHELL
+
+  # Option 2: Enable provisioning with Puppet.
+  config.vm.provision "puppet" do |puppet|
+	puppet.manifests_path = "manifests"
+	puppet.manifest_file  = "default.pp"
+  end
+
+  ## Implementation ends. ##
+
+end
