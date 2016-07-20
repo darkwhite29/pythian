@@ -20,7 +20,7 @@ With Vagrant, VirtualBox, and Puppet installed,
 
 (2) When the virtual machine is booted, run "vagrant ssh" in the command line to access the guest box;
 
-(3) On the host, type "10.0.33.18" in a web brower to test if Apache is successfully installed and running with the Vagrantfile provisioner "Option 1: Shell";
+(3) On the host, type "10.0.33.18" in a web browser to test if Apache is successfully installed and running with the Vagrantfile provisioner "Option 1: Shell";
 
 (4) On the guest, run "ps -ef | grep mongod" and "ps -ef | grep redis" in the command line to test if MongoDB and Redis are successfully installed and running with the Vagrantfile provisioner "Option 2: Puppet";
 
