@@ -5,6 +5,8 @@ Author: Li Tan
 
 Software Used: Vagrant (1.8.4), VirtualBox (5.0.26), and Puppet (4.5)
 
+Applications Configured: Apache web server, PHP server scripting language, MongoDB and Redis database servers
+
 
 1. Vagrant Virtual Machine Configuration
 
